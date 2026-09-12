@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇨🇿 CZ 01 - xiaohe
   type: vless
-  server: 104.21.3.133
-  port: 2083
-  uuid: 2b8738de-1af5-4267-b101-c05707769ed4
+  server: 188.114.97.6
+  port: 443
+  uuid: 0432902e-6604-40cd-bbd0-57ab4e5d909f
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: fans.liverpool.qzz.io
+  servername: bpb-4dc4958b.hxjkcghchv.workers.dev
   network: ws
   ws-opts:
-    path: /eyJqdW5rIjoiY0Y0cENQUmxsNyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    path: /eyJqdW5rIjoiOENNZnB6WTgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
     headers:
-      Host: fans.liverpool.qzz.io
+      Host: bpb-4dc4958b.hxjkcghchv.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
