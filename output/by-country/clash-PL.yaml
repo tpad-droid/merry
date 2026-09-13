@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇵🇱 PL 01 - xiaohe
-  type: ss
-  server: 194.61.121.93
-  port: 7538
-  cipher: chacha20-ietf-poly1305
-  password: U9YAoqBgg5VyGBc6vQv1sN
-  udp: true
-- name: 🇵🇱 PL 02 - xiaohe
   type: vless
   server: 94.183.209.59
   port: 443
@@ -24,21 +17,53 @@ proxies:
     path: /
     headers:
       Host: 94.183.209.59
+- name: 🇵🇱 PL 02 - xiaohe
+  type: ss
+  server: 194.61.121.93
+  port: 7538
+  cipher: chacha20-ietf-poly1305
+  password: U9YAoqBgg5VyGBc6vQv1sN
+  udp: true
 - name: 🇵🇱 PL 03 - xiaohe
   type: vless
-  server: 104.24.31.89
+  server: 94.183.209.59
   port: 443
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: rayan-007.nastaran.dpdns.org
+      Host: 94.183.209.59
 - name: 🇵🇱 PL 04 - xiaohe
+  type: vless
+  server: 94.183.209.59
+  port: 443
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.209.59
+- name: 🇵🇱 PL 05 - xiaohe
+  type: vless
+  server: 94.183.209.59
+  port: 443
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.209.59
+- name: 🇵🇱 PL 06 - xiaohe
   type: vless
   server: 94.183.209.58
   port: 443
@@ -50,49 +75,20 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 94.183.209.58
-- name: 🇵🇱 PL 05 - xiaohe
-  type: vless
-  server: 104.25.22.24
-  port: 443
-  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: khoda.ak-khoda.workers.dev
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: khoda.ak-khoda.workers.dev
-- name: 🇵🇱 PL 06 - xiaohe
-  type: vless
-  server: 104.25.146.77
-  port: 443
-  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: khoda.ak-khoda.workers.dev
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: khoda.ak-khoda.workers.dev
+      Host: pl2.lckdwn.ru
 - name: 🇵🇱 PL 07 - xiaohe
   type: vless
-  server: 104.17.247.68
+  server: 94.183.209.59
   port: 443
-  uuid: e6cc4788-3c45-4df1-94f3-8303504a65bf
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: khoda.ak-khoda.workers.dev
   network: ws
   ws-opts:
-    path: /sync
+    path: /
     headers:
-      Host: khoda.ak-khoda.workers.dev
+      Host: 94.183.209.59
 - name: 🇵🇱 PL 08 - xiaohe
   type: vless
   server: 94.183.209.58
@@ -106,6 +102,19 @@ proxies:
     path: /
     headers:
       Host: pl2.lckdwn.ru
+- name: 🇵🇱 PL 09 - xiaohe
+  type: vless
+  server: 94.183.209.59
+  port: 443
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 94.183.209.59
 proxy-groups:
 - name: PROXIES
   type: select
@@ -119,6 +128,7 @@ proxy-groups:
   - 🇵🇱 PL 06 - xiaohe
   - 🇵🇱 PL 07 - xiaohe
   - 🇵🇱 PL 08 - xiaohe
+  - 🇵🇱 PL 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -132,5 +142,6 @@ proxy-groups:
   - 🇵🇱 PL 06 - xiaohe
   - 🇵🇱 PL 07 - xiaohe
   - 🇵🇱 PL 08 - xiaohe
+  - 🇵🇱 PL 09 - xiaohe
 rules:
 - MATCH,PROXIES
