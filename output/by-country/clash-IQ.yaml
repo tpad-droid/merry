@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
+- name: 🇮🇶 IQ 01 - xiaohe
   type: vless
-  server: 162.159.152.4
+  server: 188.114.97.6
   port: 443
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  uuid: bd8c736e-cae1-43d7-b573-9672e6ca4989
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: rAyAn-007.mAxImA.DpDnS.OrG
+  servername: l0n0qgkdttu061g57fhqzbet333s4t.ade-1004.workers.dev
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /vl/zXLTmz3hE3szn64f?ed=2560
     headers:
-      Host: rAyAn-007.mAxImA.DpDnS.OrG
+      Host: l0n0qgkdttu061g57fhqzbet333s4t.ade-1004.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
+  - 🇮🇶 IQ 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
+  - 🇮🇶 IQ 01 - xiaohe
 rules:
 - MATCH,PROXIES
