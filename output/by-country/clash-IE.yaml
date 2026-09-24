@@ -12,18 +12,12 @@ proxies:
   password: znEtjgHLXH4FBLic
   udp: true
 - name: 🇮🇪 IE 02 - xiaohe
-  type: vless
-  server: 154.197.75.40
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  type: ss
+  server: 74.234.59.81
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: znEtjgHLXH4FBLic
   udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime37.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
